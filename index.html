@@ -2,38 +2,181 @@
 <html lang="en">
 
 <head>
-  <title>HomeWork JS</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>HomeWork JS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
-  <main>
+    <header>
+        <!-- place navbar here -->
+        <nav class="bg-primary m-0">
+            <div class="container">
+                <ul class="navbar text-center list-unstyled py-3">
+                    <li><a href="#ques1" onclick="clickFuntion1()">Question 1</a></li>
+                    <li><a href="#ques2" onclick="clickFuntion2()">Question 2</a></li>
+                    <li><a href="#ques3" onclick="clickFuntion3()">Question 3</a></li>
+                    <li><a href="#ques4" onclick="clickFuntion4()">Question 4</a></li>
+                    <li><a href="#ques5" onclick="clickFuntion5()">Question 5</a></li>
+                </ul>
+                <style>
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
 
-  </main>
- 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
+                    a:hover {
+                        color: #060606;
+                    }
+                </style>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container my-5">
+            <section id="ques1" style="display: block;">
+                <div class="alert alert-info my-5">
+                    <div class="card d-block mx-auto w-50">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Question 1: Tính lương nhân viên</h3>
+                        </div>
+                        <div class="card-body">
+                            <label for="" class="form-label">Số giờ làm</label>
+                            <input type="number" class="form-control" name="" id="nhapSoGio" aria-describedby="helpId"
+                                placeholder="">
+                            <small id="helpId" class="form-text text-muted">nhập vào số giờ làm</small>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="btnTinhLuong" class="btn btn-success my-3" onclick="tienLuong()">Tính
+                                lương</button>
+                            <h3 id="tinhLuong" class="text-center alert alert-success">---</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ques2" style="display: none;">
+                <div class="alert alert-success my-5">
+                    <div class="card d-block mx-auto w-50">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Question 2: Tính giá trị trung bình</h3>
+                        </div>
+                        <div class="card-body">
+                            <label for="" class="form-label">Số thứ nhất</label>
+                            <input type="number" class="form-control" name="" id="nhapSo1" aria-describedby="helpId"
+                                placeholder="">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+                            <label for="" class="form-label">Số thứ hai</label>
+                            <input type="number" class="form-control" name="" id="nhapSo2" aria-describedby="helpId"
+                                placeholder="">
 
-  <script src="./js/question1.js"></script>
-  <script src="./js/question2.js"></script>
-  <script src="./js/question3.js"></script>
-  <script src="./js/question4.js"></script>
-  <script src="./js/question5.js"></script>
+                            <label for="" class="form-label">Số thứ ba</label>
+                            <input type="number" class="form-control" name="" id="nhapSo3" aria-describedby="helpId"
+                                placeholder="">
+
+                            <label for="" class="form-label">Số thứ tư</label>
+                            <input type="number" class="form-control" name="" id="nhapSo4" aria-describedby="helpId"
+                                placeholder="">
+
+                            <label for="" class="form-label">Số thứ năm</label>
+                            <input type="number" class="form-control" name="" id="nhapSo5" aria-describedby="helpId"
+                                placeholder="">
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="btnTinhLuong" class="btn btn-success my-3" onclick="tinhGiaTriTB()">Kết
+                                quả</button>
+                            <h3 id="tinhTB" class="text-center alert alert-success">---</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ques3" style="display: none;">
+                <div class="alert alert-info my-5">
+                    <div class="card d-block mx-auto w-50">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Question 3: Quy đổi tiền (USD > VND)</h3>
+                        </div>
+                        <div class="card-body">
+                            <label for="" class="form-label">Số USD</label>
+                            <input type="number" class="form-control" name="" id="nhapSoUSD" aria-describedby="helpId"
+                                placeholder="">
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="btnDoiTien" class="btn btn-success my-3" onclick="Quydoi()">Quy đổi</button>
+                            <h3 id="tienQuyDoi" class="text-center alert alert-success">---</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ques4" style="display: none;">
+                <div class="alert alert-success my-5">
+                    <div class="card d-block mx-auto w-50">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Question 4: Tính chu vi và diện tích hình chữ nhật</h3>
+                        </div>
+                        <div class="card-body">
+                            <label for="" class="form-label">Chiều dài</label>
+                            <input type="number" class="form-control" name="" id="nhapChieuDai"
+                                aria-describedby="helpId" placeholder="">
+
+                            <label for="" class="form-label">Chiều rộng</label>
+                            <input type="number" class="form-control" name="" id="nhapChieuRong"
+                                aria-describedby="helpId" placeholder="">
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="btnTinhHinhChuNhat" class="btn btn-success my-3" onclick="tinhHinhchunhat()">Kết
+                                quả</button>
+                            <h3 id="chuVidienTich" class="text-center alert alert-success">---</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="ques5" style="display: none;">
+                <div class="alert alert-info my-5">
+                    <div class="card d-block mx-auto w-50">
+                        <div class="card-header bg-danger text-center text-white">
+                            <h3>Question 5: Tính tổng hai ký số</h3>
+                        </div>
+                        <div class="card-body">
+                            <label for="" class="form-label">Số có hai chữ số</label>
+                            <input type="number" class="form-control" name="" id="nhapSo2ChuSo"
+                                aria-describedby="helpId" placeholder="">
+
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="btnTinhTong2So" class="btn btn-success my-3" onclick="tong2so()">Kết
+                                quả</button>
+                            <h3 id="tong2KySo" class="text-center alert alert-success">---</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+
+    <script src="./js/question1.js"></script>
+    <script src="./js/question2.js"></script>
+    <script src="./js/question3.js"></script>
+    <script src="./js/question4.js"></script>
+    <script src="./js/question5.js"></script>
+    <script src="./js/click.js"></script>
 </body>
 
 </html>
